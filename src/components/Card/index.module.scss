@@ -1,0 +1,20 @@
+@use '../../styles/abstracts/variables';
+@use '../../styles/abstracts/mixins';
+
+.container {
+  @include mixins.flexCenter();
+  flex-direction: column;
+  background-color: variables.$red;
+  color: variables.$blue;
+  height: 100vh;
+}
+
+.title {
+  composes: boldRoboto from global;
+  font-size: 3.2rem;
+}
+
+.subTitle {
+  composes: normalRoboto from global;
+  font-size: 2rem;
+}
